@@ -15,8 +15,8 @@ df = pd.read_csv('../data/mocksurvey.csv',index_col=0)
 
 # create traces using a list comprehension:
 data = [go.Bar(
-    y = df.index,     # reverse your x- and y-axis assignments
-    x = df[response],
+    x = df.index,     # reverse your x- and y-axis assignments
+    y = df[response],
     orientation='h',  # this line makes it horizontal!
     name=response
 ) for response in df.columns]
